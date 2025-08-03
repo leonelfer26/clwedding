@@ -1,13 +1,84 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Invitación de Boda</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin: 1em 0;
+    }
+    .button {
+      background: #ff69b4;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    iframe {
+      margin-top: 2em;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
   <h1>¡Nos casamos!</h1>
-  <p>Candela & Leonel</p>
-  <p>14 de marzo de 2026</p>
+  <p><strong>Lucía & Héctor</strong></p>
+  <p>3 de diciembre de 2025</p>
+
+  <div class="countdown" id="countdown"></div>
+
+  <a class="button" href="https://wa.me/5491123456789?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Lucía%20y%20Héctor." target="_blank">
+    Confirmar Asistencia (WhatsApp)
+  </a>
+
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.686522065401!2d-58.419240684480885!3d-34.61178118045906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb5e2f7b06e7%3A0x4e4c8a92b725f0c!2sPalacio%20San%20Miguel!5e0!3m2!1ses!2sar!4v1618337370909!5m2!1ses!2sar" 
+    allowfullscreen="" loading="lazy">
+  </iframe>
+
+  <script>
+    const countdown = document.getElementById('countdown');
+    const weddingDate = new Date('2025-12-03T00:00:00').getTime();
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        countdown.innerText = "¡Hoy es el gran día!";
+        clearInterval(interval);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdown.innerText = `Faltan ${days} días, ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
 </body>
 </html>
