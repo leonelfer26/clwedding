@@ -102,42 +102,110 @@
       margin-top: -10px;
     }
 
+    .countdown {
+      font-size: 2rem;
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* Aumentado */
+      align-items: center;
+    }
+
+    .countdown div {
+      text-align: center;
+    }
+
+    .countdown span {
+      display: block;
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--verde);
+      line-height: 1;
+    }
+
+    .countdown .label {
+      font-size: 0.75rem;
+      margin-top: 5px;
+      letter-spacing: 1px;
+      color: var(--verde);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .countdown .colon {
+      font-size: 3rem;
+      color: var(--verde);
+      line-height: 1;
+      margin: 0 15px; /* Aumentado */
+    }
+
     footer {
       background-color: var(--verde);
       color: white;
       padding: 20px;
       font-size: 0.9rem;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-<header>
   <header>
-  <img src="./portada.png" alt="Candela y Leonel - Nos Casamos" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;">
-</header>
+    <img src="./portada.png" alt="Candela y Leonel - Nos Casamos" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;">
+  </header>
 
-</header>
+  <div class="countdown" id="countdown">
+    <div><span id="days">0</span><div class="label">DÍAS</div></div>
+    <div class="colon">:</div>
+    <div><span id="hours">0</span><div class="label">HORAS</div></div>
+    <div class="colon">:</div>
+    <div><span id="minutes">0</span><div class="label">MINUTOS</div></div>
+    <div class="colon">:</div>
+    <div><span id="seconds">0</span><div class="label">SEGUNDOS</div></div>
+  </div>
 
-<div class="info">
-  <h3>¡Nos casamos!</h3>
-  <p>Te esperamos para celebrar juntos este gran día.</p>
-  <p>📍 <strong>Lugar:</strong> Salón El Faro, General Pico, La Pampa</p>
-  <p>📅 <strong>Fecha:</strong> 14 de marzo de 2026</p>
+  <div class="info">
+    <h3>¡Nos casamos!</h3>
+    <p>Te esperamos para celebrar juntos este gran día.</p>
+    <p>📍 <strong>Lugar:</strong> Salón El Faro, General Pico, La Pampa</p>
+    <p>📅 <strong>Fecha:</strong> 14 de marzo de 2026</p>
 
-  <a class="button" href="https://wa.me/5492302441579?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Candela%20y%20Leonel." target="_blank">
-    Confirmar asistencia
-  </a>
-</div>
+    <a class="button" href="https://wa.me/5492302441579?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Candela%20y%20Leonel." target="_blank">
+      Confirmar asistencia
+    </a>
+  </div>
 
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.980962026844!2d-63.74848602382284!3d-35.65943118013514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95dbf9edcf6e13c9%3A0x4b26845c5d09cb9f!2sSalon%20de%20Fiestas%20El%20Faro!5e0!3m2!1ses-419!2sar!4v1691018123456"
-  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.980962026844!2d-63.74848602382284!3d-35.65943118013514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95dbf9edcf6e13c9%3A0x4b26845c5d09cb9f!2sSalon%20de%20Fiestas%20El%20Faro!5e0!3m2!1ses-419!2sar!4v1691018123456"
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
 
-<footer>
-  Con amor, Candela & Leonel
-</footer>
+  <footer>
+    Con amor, Candela & Leonel
+  </footer>
+
+  <script>
+    // Fecha objetivo: 14 de marzo de 2026 a las 00:00
+    const targetDate = new Date("2026-03-14T00:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      const seconds = Math.floor((diff / 1000) % 60);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 
 </body>
 </html>
