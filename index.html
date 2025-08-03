@@ -61,47 +61,6 @@
       margin-top: 5px;
     }
 
-    .info {
-      background-color: #fef4ef;
-      padding: 40px 20px;
-      margin-top: 40px;
-    }
-
-    .info h3 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: #4b3e36;
-    }
-
-    .info p {
-      font-size: 1.1rem;
-      color: #4b3e36;
-    }
-
-    .button {
-      background-color: #8e5b42;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #6e4430;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin-top: -10px;
-    }
-
     .countdown {
       font-size: 2rem;
       margin-top: 40px;
@@ -178,6 +137,68 @@
       }
     }
 
+    .frase-destacada {
+      background-color: #6e7a61;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 80px;
+    }
+
+    .frase-destacada .linea {
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+      width: 40%;
+      margin: 25px auto;
+      max-width: 660px;
+      width: 87%;
+    }
+
+    .info {
+      background-color: #fef4ef;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+
+    .info h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #4b3e36;
+    }
+
+    .info p {
+      font-size: 1.1rem;
+      color: #4b3e36;
+    }
+
+    .button {
+      background-color: #8e5b42;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #6e4430;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin-top: -10px;
+    }
+
     footer {
       background-color: var(--verde);
       color: white;
@@ -203,6 +224,12 @@
     <div><span id="seconds">0</span><div class="label">SEGUNDOS</div></div>
   </div>
 
+  <section class="frase-destacada">
+    <div class="linea"></div>
+    EL CAMINO ES MÁS DIVERTIDO SI LO RECORREMOS JUNTOS
+    <div class="linea"></div>
+  </section>
+
   <div class="info">
     <h3>¡Nos casamos!</h3>
     <p>Te esperamos para celebrar juntos este gran día.</p>
@@ -224,7 +251,6 @@
   </footer>
 
   <script>
-    // Fecha objetivo: 14 de marzo de 2026 a las 00:00
     const targetDate = new Date("2026-03-14T00:00:00");
 
     function updateCountdown() {
