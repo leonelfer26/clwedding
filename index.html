@@ -215,16 +215,41 @@
 }
 
 .itinerario-contenedor {
+  position: relative;
   background-color: white;
   border: 1px solid rgba(105, 123, 91, 0.3);
   border-radius: 6px;
   padding: 30px 20px;
-  max-width: 400px;
+  max-width: 33%;
   width: 100%;
   text-align: center;
+  overflow: hidden;
 }
 
-/* Título refinado */
+  @media (max-width: 767px) {
+    .itinerario-contenedor {
+      max-width: none;
+      width: 100%;    
+    }
+  }
+
+.itinerario-contenedor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('./itinerario-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.itinerario-contenedor > * {
+  position: relative;
+  z-index: 1;
+}
+
 .titulo-itinerario {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
@@ -247,7 +272,6 @@
   opacity: 0.4;
 }
 
-/* Eventos refinados */
 .evento {
   margin-bottom: 20px;
 }
@@ -275,7 +299,6 @@
   color: #4b3e36;
 }
 
-/* Separadores */
 .itinerario-contenedor hr {
   border: none;
   border-top: 1px solid rgba(105, 123, 91, 0.2);
