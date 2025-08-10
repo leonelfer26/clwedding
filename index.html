@@ -206,6 +206,73 @@
       font-size: 0.9rem;
       margin-top: 40px;
     }
+
+  .itinerario {
+  background-color: var(--fondo);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.itinerario-contenedor {
+  background-color: white;
+  border: 1px solid rgba(105, 123, 91, 0.3);
+  border-radius: 6px;
+  padding: 30px 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.titulo-itinerario {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 200;
+  color: var(--verde);
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.titulo-itinerario::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: var(--verde);
+  margin: 8px auto 0;
+  opacity: 0.4;
+}
+
+.evento {
+  margin-bottom: 20px;
+}
+
+.icono {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.evento h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--verde);
+  margin-bottom: 8px;
+}
+
+.evento p {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: #4b3e36;
+}
+
+.itinerario-contenedor hr {
+  border: none;
+  border-top: 1px solid rgba(105, 123, 91, 0.2);
+  margin: 20px 0;
+}
   </style>
 </head>
 <body>
@@ -229,6 +296,28 @@
     EL CAMINO ES MÁS DIVERTIDO SI LO RECORREMOS JUNTOS
     <div class="linea"></div>
   </section>
+
+  <section class="itinerario">
+  <div class="itinerario-contenedor">
+    <h3 class="titulo-itinerario">Itinerario</h3>
+    <div class="evento">
+      <div class="icono">💍</div>
+      <h4>Civil</h4>
+      <p>📅 14 de marzo de 2026</p>
+      <p>⏰ 20:00 hs</p>
+      <p>📍 Salón El Faro, General Pico, La Pampa</p>
+    </div>
+    <hr>
+    <div class="evento">
+      <div class="icono">🎉</div>
+      <h4>Fiesta</h4>
+      <p>📅 14 de marzo de 2026</p>
+      <p>⏰ 21:30 hs</p>
+      <p>📍 Salón El Faro, General Pico, La Pampa</p>
+    </div>
+  </div>
+</section>
+
 
   <div class="info">
     <h3>¡Nos casamos!</h3>
