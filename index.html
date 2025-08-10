@@ -321,6 +321,29 @@
 .date-location-container {
   margin-bottom: 40px;
 }
+
+.photo {
+  width: 33%;
+}
+
+.photo-container{
+  display: flex;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.photo-section {
+  margin: 20px 10px;
+}
+
+.middle-photo{
+  margin: 0 10px;
+}
   </style>
 </head>
 <body>
@@ -357,7 +380,21 @@
       <p>Salón El Faro</p>
     </div>
   </section>
-
+  
+  <section class="photo-section">
+    <div class="photo-container">
+      <div class="photo">
+        <img src="./example.png">
+      </div>
+      <div class="photo middle-photo">
+        <img src="./example.png">
+      </div>
+      <div class="photo">
+        <img src="./example.png">
+      </div>
+    </div>
+  </section>
+  
   <section class="itinerario">
   <div class="itinerario-contenedor">
     <h3 class="titulo-itinerario">Itinerario</h3>
