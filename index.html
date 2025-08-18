@@ -447,6 +447,55 @@
       display: flex;
       justify-content: center;
     }
+
+    .confirmation{
+      background-color: #6e7a61;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .confirmation h3 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin: 10px 0;
+    }
+
+    .container-container {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+    }
+
+    .confirmation-gif-container{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .button-wsp {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #707f62;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .button-wsp:hover {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -538,10 +587,25 @@
       <h3>DRESS CODE</h3>
       <p>Blanco y beige se reservan para los novios</p>
   </section>
-
-  <footer>
-    Con amor, Candela & Leonel
-  </footer>
+    
+  <section class="confirmation">
+    <div class="confirmation-container">
+      <div class="confirmation-gif-container">
+        <img src="./confirmation.gif" width="60" height="60" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </div>
+      <h3>
+        CONFIRMÁ TU ASISTENCIA
+      </h3>
+      <p>
+        ANTES DEL 1 DE FEBRERO
+      </p>
+      <a href="https://wa.me/5492302441579?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Candela%20y%20Leonel." 
+        target="_blank" 
+        class="button-wsp">
+        Confirmar asistencia
+      </a>
+    </div>
+  </section>
 
   <script>
     const targetDate = new Date("2026-03-14T00:00:00");
