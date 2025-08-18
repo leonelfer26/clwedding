@@ -207,164 +207,197 @@
       margin-top: 40px;
     }
 
-  .itinerario {
-  background-color: var(--fondo);
-  margin: 60px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.itinerario-contenedor {
-  position: relative;
-  background-color: white;
-  border: 1px solid rgba(105, 123, 91, 0.3);
-  border-radius: 6px;
-  padding: 30px 20px;
-  max-width: 33%;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-}
-
-  @media (max-width: 767px) {
-    .itinerario-contenedor {
-      max-width: none;
-      width: 100%;    
+    .itinerario {
+      background-color: var(--fondo);
+      margin: 60px 20px;
+      display: flex;
+      justify-content: center;
     }
-  }
 
-.itinerario-contenedor::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('./itinerario-background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.05;
-  z-index: 0;
-}
+    .itinerario-contenedor {
+      position: relative;
+      background-color: white;
+      border: 1px solid rgba(105, 123, 91, 0.3);
+      border-radius: 6px;
+      padding: 30px 20px;
+      max-width: 33%;
+      width: 100%;
+      text-align: center;
+      overflow: hidden;
+    }
 
-.itinerario-contenedor > * {
-  position: relative;
-  z-index: 1;
-}
+    @media (max-width: 767px) {
+      .itinerario-contenedor {
+        max-width: none;
+        width: 100%;    
+      }
+    }
 
-.titulo-itinerario {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 200;
-  color: var(--verde);
-  text-transform: uppercase;
-  margin-bottom: 25px;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 5px;
-}
+    .itinerario-contenedor::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('./itinerario-background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.05;
+      z-index: 0;
+    }
 
-.titulo-itinerario::after {
-  content: "";
-  display: block;
-  width: 90%;
-  height: 1px;
-  background-color: var(--verde);
-  margin: 8px auto 0;
-  opacity: 0.4;
-}
+    .itinerario-contenedor > * {
+      position: relative;
+      z-index: 1;
+    }
 
-.evento {
-  margin-bottom: 20px;
-}
+    .titulo-itinerario {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 200;
+      color: var(--verde);
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
 
-.evento h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--verde);
-  margin: 10px 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+    .titulo-itinerario::after {
+      content: "";
+      display: block;
+      width: 90%;
+      height: 1px;
+      background-color: var(--verde);
+      margin: 8px auto 0;
+      opacity: 0.4;
+    }
 
-.evento p {
-  margin: 18px 0 10px;
-  font-size: 1.4rem;
-  font-weight: 300;
-  color: var(--verde);
-  text-transform: uppercase;
-}
+    .evento {
+      margin-bottom: 20px;
+    }
 
-.itinerario-contenedor hr {
-  border: none;
-  border-top: 1px solid rgba(105, 123, 91, 0.2);
-  margin: 20px auto;
-  width: 80%;
-}
+    .evento h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--verde);
+      margin: 10px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-.date-location {
-  margin: 60px 0px;
-}
+    .evento p {
+      margin: 18px 0 10px;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--verde);
+      text-transform: uppercase;
+    }
 
-.date-location h3 {
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 10px 0;
-}
+    .itinerario-contenedor hr {
+      border: none;
+      border-top: 1px solid rgba(105, 123, 91, 0.2);
+      margin: 20px auto;
+      width: 80%;
+    }
 
-.date-location p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin: 0px;
-}
+    .date-location {
+      margin: 60px 0px;
+    }
 
-.date-location-container {
-  margin-bottom: 40px;
-}
+    .date-location h3 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin: 10px 0;
+    }
 
-.photo {
-  width: 33%;
-}
+    .date-location p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0px;
+    }
 
-.photo-container{
-  display: flex;
-}
+    .date-location-container {
+      margin-bottom: 40px;
+    }
 
-.photo img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
+    .photo {
+      width: 33%;
+    }
 
-.photo-section {
-  margin: 0px 10px;
-}
+    .photo-container{
+      display: flex;
+    }
 
-.middle-photo{
-  margin: 0 10px;
-}
+    .photo img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
 
-.button-mapa {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  border: 1px solid var(--verde);
-  color: var(--verde);
-  text-decoration: none;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
+    .photo-section {
+      margin: 0px 10px;
+    }
 
-.button-mapa:hover {
-  background-color: var(--verde);
-  color: white;
-}
+    .middle-photo{
+      margin: 0 10px;
+    }
 
-.last-date-location-container{
-  margin-bottom: 20px;
-}
+    .button-mapa {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: 1px solid var(--verde);
+      color: var(--verde);
+      text-decoration: none;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .button-mapa:hover {
+      background-color: var(--verde);
+      color: white;
+    }
+
+    .last-date-location-container{
+      margin-bottom: 20px;
+    }
+
+    .photo-container {
+      display: flex;
+      gap: 20px;
+      overflow: hidden;
+      margin: 0px 20px;
+    }
+
+    .photo {
+      width: 33.333%;
+      flex-shrink: 0;
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .photo-container {
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        margin: 0px;
+        gap: 0px;
+      }
+      .photo {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -385,7 +418,7 @@
 
   <section class="frase-destacada">
     <div class="linea"></div>
-    EL CAMINO ES MÁS DIVERTIDO SI LO RECORREMOS JUNTOS
+      EL CAMINO ES MÁS DIVERTIDO SI LO RECORREMOS JUNTOS
     <div class="linea"></div>
   </section>
 
@@ -410,37 +443,31 @@
     </div>
   </section>
   
-  <section class="photo-section">
+  <section>
     <div class="photo-container">
-      <div class="photo">
-        <img src="./example.png">
-      </div>
-      <div class="photo middle-photo">
-        <img src="./example.png">
-      </div>
-      <div class="photo">
-        <img src="./example.png">
-      </div>
+      <div class="photo"><img src="./example.png" alt="foto 1"></div>
+      <div class="photo"><img src="./example.png" alt="foto 2"></div>
+      <div class="photo"><img src="./example.png" alt="foto 3"></div>
     </div>
   </section>
-  
+
   <section class="itinerario">
-  <div class="itinerario-contenedor">
-    <h3 class="titulo-itinerario">Itinerario</h3>
-    <div class="evento">
-      <img src="./corazon.gif" width="70" height="70" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      <h4>Civil</h4>
-      <p>20:00 hs</p>
+    <div class="itinerario-contenedor">
+      <h3 class="titulo-itinerario">Itinerario</h3>
+      <div class="evento">
+        <img src="./corazon.gif" width="70" height="70" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        <h4>Civil</h4>
+        <p>20:00 hs</p>
+      </div>
+      <hr>
+      <div class="evento">
+        <img src="./esfera.gif" width="70" height="70" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        <h4>Celebración</h4>
+        <p>21:30 hs</p>
+      </div>
+      <hr>
     </div>
-    <hr>
-    <div class="evento">
-      <img src="./esfera.gif" width="70" height="70" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      <h4>Celebración</h4>
-      <p>21:30 hs</p>
-    </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
   <footer>
     Con amor, Candela & Leonel
@@ -468,5 +495,26 @@
     setInterval(updateCountdown, 1000);
   </script>
 
+  <script>
+    const container = document.querySelector('.photo-container');
+    const slides = document.querySelectorAll('.photo');
+    let index = 0;
+
+    function goTo(n) {
+      index = (n + slides.length) % slides.length;
+      container.scrollTo({
+        left: index * container.clientWidth,
+        behavior: 'smooth'
+      });
+    }
+
+    function isMobile() {
+      return window.innerWidth <= 768;
+    }
+
+    setInterval(() => {
+      if (isMobile()) goTo(index + 1);
+    }, 4000);
+  </script>
 </body>
 </html>
